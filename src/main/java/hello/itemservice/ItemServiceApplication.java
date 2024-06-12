@@ -37,29 +37,37 @@ public class ItemServiceApplication {
 		return new TestDataInit(itemRepository);
 	}
 
+
 	/**
 	 * 테스트용 데이터베이스 설정
 	 * @Profile("test") : test 프로파일이 활성화되어 있을 때 빈으로 등록
 	 * @return
+	 * 단,test  application.properties 파일에서 datasource 설정을 주석처리하면 아래 설정이 필요하지 않다.
 	 */
+/*
+
 	@Bean
 	@Profile("test")
 	public DataSource dataSource() {
 		log.info("메모리 데이터베이스 초기화");
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("org.h2.Driver");
-		/**
+		*/
+/**
 		 *  jdbc:h2:mem:db;DB_CLOSE_DELAY=-1 : 메모리 모드로 데이터베이스를 생성하고, 애플리케이션이 종료될 때까지 데이터를 유지
 		 *  DB_CLOSE_DELAY=-1 : 애플리케이션이 종료될 때까지 데이터를 유지
 		 *  DB_CLOSE_ON_EXIT=FALSE : JVM이 종료될 때 데이터베이스를 유지
 		 *  실무에서는 사용하지 않는 것이 좋다.
 		 *  H2 데이터베이스는 애플리케이션을 재시작할 때마다 데이터가 초기화되기 때문에 테스트용도로만 사용
 		 *  실무에서는 MySQL, PostgreSQL, Oracle, SQL Server 등을 사용
-		 */
+		 *//*
+
 		dataSource.setUrl("jdbc:h2:mem:db;DB_CLOSE_DELAY=-1"); // H2 DB의 메모리 모드 URL
 		dataSource.setUsername("sa");
 		dataSource.setPassword("");
 		return  dataSource;
 	}
+
+*/
 
 }
