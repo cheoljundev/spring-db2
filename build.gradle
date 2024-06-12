@@ -30,7 +30,7 @@ dependencies {
 	//JdbcTemplate 추가
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc' //H2 데이터베이스 추가
 	runtimeOnly 'com.h2database:h2'
-	implementation 'org.mybatis:mybatis-spring:3.0.3' // MyBatis 추가
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3' // MyBatis 추가
 
 
 	compileOnly 'org.projectlombok:lombok'
