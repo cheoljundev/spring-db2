@@ -3,7 +3,10 @@ package hello.itemservice;
 import com.zaxxer.hikari.util.DriverDataSource;
 import hello.itemservice.config.*;
 import hello.itemservice.repository.ItemRepository;
+import hello.itemservice.repository.mybatis.ItemMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Mapper;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +21,8 @@ import javax.sql.DataSource;
 //@Import(MemoryConfig.class)
 //@Import(JdbcTemplateConfigV1.class)
 //@Import(JdbcTemplateConfigV2.class)
-@Import(JdbcTemplateConfigV3.class)
+//@Import(JdbcTemplateConfigV3.class)
+@Import(MyBatisConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web")
 public class ItemServiceApplication {
 

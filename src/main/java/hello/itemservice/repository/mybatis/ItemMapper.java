@@ -17,5 +17,5 @@ public interface ItemMapper {
 
     List<Item> findAll(ItemSearchCond itemSearch);
 
-    Optional<Item> findBuId(Long id);
+    Optional<Item> findById(Long id);
 }
