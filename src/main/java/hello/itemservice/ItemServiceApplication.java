@@ -23,7 +23,8 @@ import javax.sql.DataSource;
 //@Import(JdbcTemplateConfigV2.class)
 //@Import(JdbcTemplateConfigV3.class)
 //@Import(MyBatisConfig.class)
-@Import(JpaConfig.class)
+//@Import(JpaConfig.class)
+@Import(SpringDataJpaConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web")
 public class ItemServiceApplication {
 
